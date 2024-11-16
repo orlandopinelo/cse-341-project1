@@ -1,44 +1,3 @@
-# //localhost
-# ### Get all contacts
-# GET http://localhost:8080/contacts
-
-# ### Get contact by id
-# GET http://localhost:8080/contacts/672f186230be1bd667b11947
-
-# //Render
-# ### GEt all contacts
-# GET https://project1-ad3r.onrender.com/contacts
-
-# ### Get contact by ID
-# GET https://project1-ad3r.onrender.com/contacts/672f186230be1bd667b11947
-
-# ### Create Contact
-# POST http://localhost:8080/contacts HTTP/1.1
-# content-Type: application/json
-
-# {
-#      "firstName": "JoeTest",
-#      "lastName": "Test",
-#      "email": "joe.test@test.com",
-#      "favoriteColor": "pink",
-#      "birthday": "11/11/2056"
-# }
-
-# ### PUT Contact
-# PUT http://localhost:8080/contacts/6737ed99b1cfb0197abb3895 HTTP/1.1
-# content-Type: application/json
-
-# {
-#      "firstName": "joeJoeTest",
-#      "lastName": "joejoeTest",
-#      "email": "joejoe.test@test.com",
-#      "favoriteColor": "pinkjoe",
-#      "birthday": "11/11/2056"
-# }
-
-# ### Delete Contact
-# DELETE http://localhost:8080/contacts/6737ed99b1cfb0197abb3895
-
 // Localhost
 ### Get all contacts
 GET http://localhost:8080/contacts
@@ -53,7 +12,7 @@ GET https://project1-ad3r.onrender.com/contacts
 ### Get contact by ID
 GET https://project1-ad3r.onrender.com/contacts/672f186230be1bd667b11947
 
-### Create Contact
+### Create Contact Localhost
 POST http://localhost:8080/contacts HTTP/1.1
 Content-Type: application/json
 
@@ -66,7 +25,7 @@ Content-Type: application/json
 }
 
 ### Update Contact
-PUT http://localhost:8080/contacts/6737f1bd66124b37a7c89e39 HTTP/1.1
+PUT http://localhost:8080/contacts/673817ef6cdded83617c565d HTTP/1.1
 Content-Type: application/json
 
 {
@@ -78,4 +37,4 @@ Content-Type: application/json
 }
 
 ### Delete Contact
-DELETE http://localhost:8080/contacts/6737f3a62aa551fb62fa14b2
+DELETE http://localhost:8080/contacts/6737f1bd66124b37a7c89e39

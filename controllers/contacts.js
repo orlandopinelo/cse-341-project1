@@ -2,6 +2,7 @@ const mongodb = require('../data/database');
 const ObjectID = require('mongodb').ObjectId;
 
 const getAllContacts = async (req, res) => {
+    //#swagger.tags=['Contacts']
     const result = await mongodb.getDatabase().db().collection('contacts').find();
     result.toArray().then((contacts) =>{
     res.setHeader('Content-Type','application/json')
@@ -12,6 +13,7 @@ const getAllContacts = async (req, res) => {
 }; 
 
 const getSingleContact = async (req, res) => {
+    //#swagger.tags=['Contacts']
     const contactId = new ObjectID(req.params.id)
     const result = await mongodb.getDatabase().db().collection('contacts').find({_id: contactId});
     result.toArray().then((contacts) =>{
@@ -22,6 +24,7 @@ const getSingleContact = async (req, res) => {
 };
 
 const createContact = async(req,res) => {
+    //#swagger.tags=['Contacts']
     const contact ={
         firstName: req.body.firstName, 
         lastName: req.body.lastName,
@@ -33,14 +36,13 @@ const createContact = async(req,res) => {
     if(response.acknowledged){
         res.status(204).send();
     }else{
-        res.status(500).json(response.error || 'Some error occured while updating the contact');
+        res.status(500).json(response.error || 'Some error occured while creating the contact');
     }
 };
 
 const updateContact = async(req,res) =>{
+    //#swagger.tags=['Contacts']
     const contactId = new ObjectID(req.params.id)
-    console.log(contactId);
-    
     const contact ={
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -58,8 +60,8 @@ const updateContact = async(req,res) =>{
 
  
 const deleteContact = async (req,res) => {
+    //#swagger.tags=['Contacts']
     const contactId = new ObjectID(req.params.id);
-    console.log(contactId);
     const response = await mongodb.getDatabase().db().collection('contacts').deleteOne({_id: contactId});
     if(response.deletedCount > 0) {
         res.status(204).send();
