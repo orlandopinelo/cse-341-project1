@@ -5,7 +5,7 @@
     "description": "Contacts Api",
     "version": "1.0.0"
   },
-  "host": "https://project1-ad3r.onrender.com",
+  "host": "project1-ad3r.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
