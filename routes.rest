@@ -24,6 +24,18 @@ Content-Type: application/json
     "birthday": "11/11/2056"
 }
 
+### Create Contact Render.com
+POST https://project1-ad3r.onrender.com/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "JoeTest2",
+    "lastName": "Test2",
+    "email": "joe.test2@test.com",
+    "favoriteColor": "pink2",
+    "birthday": "22/02/2056"
+}
+
 ### Update Contact
 PUT http://localhost:8080/contacts/673817ef6cdded83617c565d HTTP/1.1
 Content-Type: application/json
@@ -36,5 +48,20 @@ Content-Type: application/json
     "birthday": "10/12/1956"
 }
 
+### Update Contact Render.com
+PUT https://project1-ad3r.onrender.com/contacts/673817ef6cdded83617c565d HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Carl",
+    "lastName": "Dawson",
+    "email": "Carl.Dawson@gmail.com",
+    "favoriteColor": "gold",
+    "birthday": "10/12/1956"
+}
+
 ### Delete Contact
-DELETE http://localhost:8080/contacts/6737f1bd66124b37a7c89e39
+DELETE http://localhost:8080/contacts/6738a84222c1c7d91589f969
+
+### Delete Contact Render.com
+DELETE https://project1-ad3r.onrender.com/contacts/6738a84222c1c7d91589f96a
