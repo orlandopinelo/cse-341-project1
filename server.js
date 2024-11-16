@@ -1,9 +1,11 @@
 const express = require('express')
-const mongodb = require('./data/database')
+const mongodb = require('./data/database');
+const bodyParser = require('body-parser');
 const app = express()
 
 const port = process.env.PORT || 8080;
 
+app.use(bodyParser.json());
 app.use('/', require('./routes'));
 
 mongodb.initDb((err) => {
@@ -13,7 +15,7 @@ mongodb.initDb((err) => {
       app.listen(port, () => {
         console.log(`Database is listening and Node.js server running on port ${port}`);
       });
-    }
+    } 
   });
   
 
